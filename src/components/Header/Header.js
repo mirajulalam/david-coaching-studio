@@ -1,0 +1,29 @@
+import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import './Header.css';
+const Header = () => {
+    return (
+        <div>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">David Coaching Studio</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                        </Nav>
+                        <Nav>
+                            <Nav.Link>Blogs</Nav.Link>
+                            <Nav.Link>About Us</Nav.Link>
+                            <Nav.Link href="#deets">LogIn</Nav.Link>
+                            <Nav.Link eventKey={2} href="#memes">
+                                SignUp
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </div>
+    );
+};
+
+export default Header;
