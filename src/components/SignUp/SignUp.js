@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './../../firebase.init';
-import { FcGoogle } from 'react-icons/fc';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 const SignUp = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -11,6 +11,8 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+
+
 
     const handleEmailBlur = event => {
         setEmail(event.target.value)
@@ -25,6 +27,7 @@ const SignUp = () => {
     if (user) {
         navigate('/home')
     }
+
     const handleCreateUser = event => {
         event.preventDefault();
         // if (password !== confirmPassword) {
@@ -37,6 +40,7 @@ const SignUp = () => {
         }
         createUserWithEmailAndPassword(email, password)
     }
+
     return (
         <div className='form-container'>
             <div>
@@ -60,10 +64,7 @@ const SignUp = () => {
                 <p>
                     Already have an account?<Link className='form-link' to='/login'>Login</Link>
                 </p>
-                <div className='form-line'>
-                    <hr className='form-hr' /> or<hr className='form-hr' />
-                </div>
-                <div className='form-google'><FcGoogle className='form-icon' />  Continue with Google</div>
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );
