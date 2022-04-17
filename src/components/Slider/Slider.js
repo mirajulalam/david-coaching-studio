@@ -1,10 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import images2 from '../../images/gym3.avif';
-import images3 from '../../images/gym8.avif';
-import images4 from '../../images/gym9.png';
-import images1 from '../../images/gym11.jpg';
-import banner from '../../images/banner1.jpg';
+import './Slider.css';
+import banner from '../../images/gym.webp';
+import banner1 from '../../images/gym13.avif';
+import banner2 from '../../images/gym15.avif';
 const Slider = () => {
 
     return (
@@ -12,7 +11,7 @@ const Slider = () => {
             <Carousel>
                 <Carousel.Item>
                     <img
-                        className="d-block"
+                        className="d-block slider"
                         src={banner}
                         alt="First slide"
                     />
@@ -23,11 +22,10 @@ const Slider = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block"
-                        src={banner}
+                        className="d-block slider"
+                        src={banner1}
                         alt="Second slide"
                     />
-
                     <Carousel.Caption>
                         <h3>David coaching studio</h3>
                         <p>Personal traning in david coaching studio</p>
@@ -35,11 +33,10 @@ const Slider = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block"
-                        src={banner}
+                        className="d-block slider"
+                        src={banner2}
                         alt="Third slide"
                     />
-
                     <Carousel.Caption>
                         <h3>David coaching studio</h3>
                         <p>Personal traning in david coaching studio</p>
