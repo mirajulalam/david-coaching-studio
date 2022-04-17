@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from './../../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+
 const SignUp = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('')
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
 
@@ -25,7 +28,7 @@ const SignUp = () => {
     }
 
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true })
     }
 
     const handleCreateUser = event => {
@@ -46,15 +49,15 @@ const SignUp = () => {
             <div>
                 <h2 className='form-title'>Sign Up</h2>
                 <form onSubmit={handleCreateUser}>
-                    <div className="input-group">
-                        <label htmlFor="email">Email</label>
+                    <div className="input-group1">
+
                         <input onBlur={handleEmailBlur} type="email" name="email" id="" required />
                     </div>
-                    <div className="input-group">
+                    <div className="input-group1">
                         <label htmlFor="password">Password</label>
                         <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
                     </div>
-                    <div className="input-group">
+                    <div className="input-group1">
                         <label htmlFor="confirm-password">Confirm Password</label>
                         <input onClick={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" required />
                     </div>
@@ -62,7 +65,7 @@ const SignUp = () => {
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
                 <p>
-                    Already have an account?<Link className='form-link' to='/login'>Login</Link>
+                    Already have an account? <Link className='form-link' to='/login'>Sign Up</Link>
                 </p>
                 <SocialLogin></SocialLogin>
             </div>
