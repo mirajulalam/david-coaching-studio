@@ -4,6 +4,17 @@
     text-align: center;
 }
 
+.service:hover {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 5px 0px 5px 5px gray;
+}
+
 .service img {
     width: 100%;
+}
+
+.sevice-details {
+    padding: 10px 10px;
 }
