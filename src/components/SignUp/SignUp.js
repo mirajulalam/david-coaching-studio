@@ -50,7 +50,6 @@ const SignUp = () => {
                 <h2 className='form-title'>Sign Up</h2>
                 <form onSubmit={handleCreateUser}>
                     <div className="input-group1">
-
                         <input onBlur={handleEmailBlur} type="email" name="email" id="" required />
                     </div>
                     <div className="input-group1">
@@ -65,7 +64,7 @@ const SignUp = () => {
                     <input className='form-submit' type="submit" value="Login" />
                 </form>
                 <p>
-                    Already have an account? <Link className='form-link' to='/login'>Sign Up</Link>
+                    Already have an account? <Link className='form-link' to='/login'>Login</Link>
                 </p>
                 <SocialLogin></SocialLogin>
             </div>
