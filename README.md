@@ -13,7 +13,7 @@ live link
 
 # ➡ at last user login logout signup option.
 
-my david-coaching-studio framwork use boostrap react-boostrap react-router react-firebase-hooks
+# my david-coaching-studio framwork use boostrap react-boostrap react-router react-firebase-hooks
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
