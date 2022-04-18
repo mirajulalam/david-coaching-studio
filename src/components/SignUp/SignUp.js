@@ -58,7 +58,7 @@ const SignUp = () => {
                         <input onClick={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" required />
                     </div>
                     <p style={{ color: 'red' }}>{error}</p>
-                    <input className='form-submit bg-primary text-white' type="submit" value="Login" />
+                    <input className='form-submit bg-primary text-white' type="submit" value="Sign Up" />
                 </form>
                 <p>
                     Already have an account? <Link className='form-link' to='/login'>Login</Link>
