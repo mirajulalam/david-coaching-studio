@@ -5,10 +5,8 @@ import banner from '../../images/gym.webp';
 import banner1 from '../../images/gym13.avif';
 import banner2 from '../../images/gym15.avif';
 const Slider = () => {
-
     return (
         <div>
-
             <Carousel>
                 <Carousel.Item>
                     <img

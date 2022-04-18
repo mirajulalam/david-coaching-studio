@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FcGoogle } from 'react-icons/fc';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
@@ -19,7 +18,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/checkout';
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const handleEmailBlur = event => {
         setEmail(event.target.value)
@@ -68,7 +67,7 @@ const Login = () => {
                     New to David coaching studio? <Link className='form-link' to='/signup'>Create an account</Link>
                 </p>
                 <p>
-                    Forget Password? <button className='form-link btn btn-link' onClick={resetPassword}>Reset Password</button>
+                    Forget Password?<button className='form-link btn btn-link' onClick={resetPassword}>Reset Password</button>
                 </p>
                 <SocialLogin></SocialLogin>
                 <ToastContainer />

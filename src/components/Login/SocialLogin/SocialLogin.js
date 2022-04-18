@@ -1,5 +1,4 @@
 import React from 'react';
-import './SocialLogin.css';
 import { FcGoogle } from 'react-icons/fc';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';

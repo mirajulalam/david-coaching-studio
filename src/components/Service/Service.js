@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import './Service.css';
 const Service = ({ service }) => {
+    const { user } = useAuthState(auth)
     const { name, picture, price, description } = service;
     const navigate = useNavigate();
+    useEffect(() => {
+        if (user) {
+            navigate('/checkout')
+        }
+    }, [user]);
     return (
         <div className='service'>
             <img src={picture} alt="" />

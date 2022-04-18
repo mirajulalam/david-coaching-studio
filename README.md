@@ -1,19 +1,19 @@
 # Getting Started with Create React App
 # david-coaching-studio
 
-live link 
+live link https://david-coaching-studio.web.app/
 
-# ➡ my websete is gym traning center one coaching traning.
+# ➡ my website is gym traning center one coach traning.
 
 # ➡ my website home page header banner sevice footer section.
 
-# ➡ my websete blogs components question ans.
+# ➡ my website blogs components question ans.
 
 # ➡ my website about us its my self my mission and my goal.
 
 # ➡ at last user login logout signup option.
 
-# my david-coaching-studio framwork use boostrap react-boostrap react-router react-firebase-hooks
+# my david-coaching-studio framwork use:  boostrap, react-boostrap ,react-router, react-firebase-hooks
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

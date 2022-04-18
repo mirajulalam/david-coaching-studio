@@ -1,5 +1,4 @@
 import React from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
 import aboutImg from '../../images/IMG_1281.JPG';
 import './AboutUs.css';
 const AboutUs = () => {
