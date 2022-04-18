@@ -18,7 +18,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/checkout';
+    const from = location.state?.from?.pathname || '/';
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
     const handleEmailBlur = event => {
         setEmail(event.target.value)
