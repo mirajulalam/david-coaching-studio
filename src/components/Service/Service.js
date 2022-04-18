@@ -11,7 +11,7 @@ const Service = ({ service }) => {
                 <h5>{name}</h5>
                 <p>${price}</p>
                 <p><small>{description}</small></p>
-                <button onClick={() => navigate('/checkout')} type="button" className="btn btn-primary">checkout</button>
+                <button onClick={() => navigate('/checkout')} type="button" className="btn btn-primary">Book</button>
             </div>
         </div>
     );

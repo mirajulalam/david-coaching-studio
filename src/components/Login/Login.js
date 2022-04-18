@@ -62,7 +62,7 @@ const Login = () => {
                         <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
                     </div>
                     <p style={{ color: 'red' }}>{error?.message}</p>
-                    <input className='form-submit' type="submit" value="Login" />
+                    <input className='form-submit text-white bg-primary' type="submit" value="Login" />
                 </form>
                 <p>
                     New to David coaching studio? <Link className='form-link' to='/signup'>Create an account</Link>

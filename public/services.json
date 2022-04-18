@@ -19,26 +19,5 @@
         "picture": "https://i.ibb.co/p0Gjvtr/gym12.jpg",
         "price": 112,
         "name": "High stepping"
-    },
-    {
-        "id": "625bb4d7ad9320e6258b20df",
-        "description": "hello",
-        "picture": "https://i.ibb.co/wzjvdqk/gym10.jpg",
-        "price": 118,
-        "name": "Alberta Dorsey"
-    },
-    {
-        "id": "625bb4d771b7b08b4be1927b",
-        "description": "hello",
-        "picture": "https://i.ibb.co/wzjvdqk/gym10.jpg",
-        "price": 276,
-        "name": "Aimee Alvarado"
-    },
-    {
-        "id": "625bb4d7fb7d543e75cff3d0",
-        "description": "hello",
-        "picture": "https://i.ibb.co/wzjvdqk/gym10.jpg",
-        "price": 206,
-        "name": "Massey Burt"
     }
 ]

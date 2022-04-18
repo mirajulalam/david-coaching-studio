@@ -8,6 +8,7 @@ const Slider = () => {
 
     return (
         <div>
+
             <Carousel>
                 <Carousel.Item>
                     <img

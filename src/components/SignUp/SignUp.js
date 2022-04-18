@@ -33,10 +33,6 @@ const SignUp = () => {
 
     const handleCreateUser = event => {
         event.preventDefault();
-        // if (password !== confirmPassword) {
-        //     setError('Your two password do not match')
-        //     return;
-        // }
         if (password.length < 6) {
             setError('Password must be 6 characters number')
             return;
@@ -50,6 +46,7 @@ const SignUp = () => {
                 <h2 className='form-title'>Sign Up</h2>
                 <form onSubmit={handleCreateUser}>
                     <div className="input-group1">
+                        <label htmlFor="email">Email</label>
                         <input onBlur={handleEmailBlur} type="email" name="email" id="" required />
                     </div>
                     <div className="input-group1">
@@ -61,7 +58,7 @@ const SignUp = () => {
                         <input onClick={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" required />
                     </div>
                     <p style={{ color: 'red' }}>{error}</p>
-                    <input className='form-submit' type="submit" value="Login" />
+                    <input className='form-submit bg-primary text-white' type="submit" value="Login" />
                 </form>
                 <p>
                     Already have an account? <Link className='form-link' to='/login'>Login</Link>
